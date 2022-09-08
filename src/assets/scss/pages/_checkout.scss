@@ -1,0 +1,399 @@
+@use '../global'as *;
+@use '../partials'as *;
+
+.checkout {
+  padding: size(40) size(0);
+
+  @include breakpoint(tab992) {
+    padding: size(54) size(0);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(40);
+
+    @include breakpoint(tab992) {
+      gap: size(54);
+    }
+  }
+
+  &-header {
+    .checkout-title {
+      color: $textDark;
+      @include font($secondaryFont, 36, normal, normal, 36);
+      text-align: center;
+
+      @include breakpoint(tab992) {
+        @include font($secondaryFont, 48, normal, normal, 48);
+      }
+    }
+  }
+
+  &-details {
+    @include flex-column;
+    gap: size(32);
+  }
+
+  .billing {
+    padding: size(24);
+    background: $sectionBg;
+    @include flex-column;
+    gap: size(32);
+
+    @include breakpoint(tab992) {
+      padding: size(40);
+    }
+
+    &-header {
+      .billing-title {
+        color: $black;
+        @include font($secondaryFont, 20, normal, normal, 20);
+
+        @include breakpoint(mobile768) {
+          @include font($secondaryFont, 24, normal, normal, 24);
+        }
+  
+        @include breakpoint(tab992) {
+          @include font($secondaryFont, 28, normal, normal, 28);
+        }
+      }
+    }
+  }
+
+  .delivery {
+    @include flex-column;
+    gap: size(4);
+
+    &-options,
+    &-details,
+    .payment {
+      padding: size(24);
+      background: $sectionBg;
+      @include flex-column;
+      gap: size(32);
+  
+      @include breakpoint(tab992) {
+        padding: size(40);
+      }
+    }
+
+    &-options {
+      &-header {
+        .delivery-options-title {
+          color: $black;
+          @include font($secondaryFont, 20, normal, normal, 20);
+  
+          @include breakpoint(mobile768) {
+            @include font($secondaryFont, 24, normal, normal, 24);
+          }
+    
+          @include breakpoint(tab992) {
+            @include font($secondaryFont, 28, normal, normal, 28);
+          }
+        }
+      }
+
+      &-body {
+        @include flex-column;
+        gap: size(16);
+
+        @include breakpoint(mobile768) {
+          flex-direction: row;
+          gap: size(32);
+        }
+
+        .option {
+          @include w100;
+
+          @include breakpoint(mobile768) {
+            width: 50%;  
+          }
+        }
+      }
+    }
+
+    &-details {
+      &-header {
+        .delivery-details-title {
+          color: $black;
+          @include font($secondaryFont, 20, normal, normal, 20);
+  
+          @include breakpoint(mobile768) {
+            @include font($secondaryFont, 24, normal, normal, 24);
+          }
+    
+          @include breakpoint(tab992) {
+            @include font($secondaryFont, 28, normal, normal, 28);
+          }
+        }
+      }
+    }
+
+    .payment {
+      &-header {
+        @include flex-column;
+        gap: size(16);
+
+        .payment-title {
+          color: $black;
+          @include font($secondaryFont, 20, normal, normal, 20);
+  
+          @include breakpoint(mobile768) {
+            @include font($secondaryFont, 24, normal, normal, 24);
+          }
+    
+          @include breakpoint(tab992) {
+            @include font($secondaryFont, 28, normal, normal, 28);
+          }
+        }
+
+        .payment-text {
+          color: $labelText;
+          @include font($primaryFont, 16, normal, normal, 24);
+        }
+      }
+
+      &-body {
+        @include flex-column;
+        gap: size(24);
+
+        .inputbox {
+          @include flex-column;
+          gap: size(12);
+          position: relative;
+      
+          .inputlabel {
+            color: $labelText;
+            @include font($primaryFont, 16, normal, normal, 24);
+      
+            .required {
+              color: $danger;
+              font: inherit;
+            }
+          }
+      
+          .inputfield {
+            @include border(solid, 1, $grayBg);
+            @include radius(6);
+            @include setBgColor($white, $black);
+            @include font($primaryFont, 16, normal, normal, 24);
+            padding: size(9) size(16);
+            @include transitionsall;
+      
+            &:focus {
+              border-color: $textGray;
+            }
+      
+            &::placeholder {
+              color: $grayBg;
+            }
+          }
+          
+          .icon {
+            position: absolute;
+            right: size(16);
+            top: 56.5%;
+            width: size(32);
+            height: size(28);
+            @include flex-center;
+            overflow: hidden;
+            cursor: pointer;
+
+            svg {
+              @include wh100;
+            }
+          }
+
+          &.cardbox {
+            .inputfield {
+              padding-right: size(56);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .order,
+  .deliveryinfos {
+    padding: size(24);
+    background: $sectionBg;
+    @include flex-column;
+    gap: size(32);
+
+    @include breakpoint(tab992) {
+      padding: size(40);
+    }
+  }
+
+  .order {
+    &-header {
+      .order-title {
+        color: $black;
+        @include font($secondaryFont, 20, normal, normal, 20);
+
+        @include breakpoint(mobile768) {
+          @include font($secondaryFont, 24, normal, normal, 24);
+        }
+  
+        @include breakpoint(tab992) {
+          @include font($secondaryFont, 28, normal, normal, 28);
+        }
+      }
+    }
+
+    &-body {
+      @include flex-column;
+      gap: size(24);
+
+      .cardorder {
+        padding-bottom: size(24);
+        @include border-single(bottom, solid, 1, $orderborder);
+        cursor: pointer;
+        @include flex-column;
+        gap: size(14);
+
+        @include breakpoint(mobile768) {
+          flex-direction: row;
+          gap: size(24);
+        }
+
+        &-cap {
+          width: size(280);
+          height: size(200);
+          @include flex-center;
+          overflow: hidden;
+
+          @include breakpoint(tab992) {
+            @include square(180);
+          }
+
+          @include breakpoint(desktop1400) {
+            width: size(280);
+            height: size(200);
+          }
+
+          img {
+            @include wh100;
+            @include transitiontransform;
+
+            @include hover {
+              @include scale(1.05);
+            }
+          }
+        }
+
+        .descriptions {
+          @include flex-column;
+          gap: size(8);
+
+          @include breakpoint(mobile768) {
+            justify-content: space-between;
+            padding-bottom: size(64);
+          }
+
+          @include breakpoint(tab992) {
+            width: calc(100% - size(180));
+          }
+
+          @include breakpoint(desktop1400) {
+            width: calc(100% - size(280));
+          }
+
+          .title {
+            color: $black;
+            @include font($primaryFont, 20, normal, normal, 20);
+    
+            @include breakpoint(mobile768) {
+              @include font($primaryFont, 24, normal, normal, 24);
+            }
+
+            @include breakpoint(tab992) {
+              @include font($primaryFont, 18, normal, normal, 24);
+            }
+
+            @include breakpoint(desktop1200) {
+              @include font($primaryFont, 24, normal, normal, 24);
+            }
+          }
+
+          .price {
+            color: $black;
+            @include font($primaryFont, 20, normal, normal, 20);
+    
+            @include breakpoint(mobile768) {
+              @include font($primaryFont, 24, normal, normal, 24);
+            }
+
+            @include breakpoint(tab992) {
+              @include font($primaryFont, 18, normal, normal, 24);
+            }
+
+            @include breakpoint(desktop1200) {
+              @include font($primaryFont, 24, normal, normal, 24);
+            }
+          }
+        }
+
+        &:last-of-type {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    &-footer {
+      @include flex-column;
+      @include border(solid, 1, $secondary);
+      padding: size(24);
+      background: $white;
+
+      .info {
+        @include flex-center-between;
+        @include border-single(bottom, solid, 1, $secondary);
+        padding: size(16) size(0);
+
+        &:last-of-type {
+          border-bottom: 0;
+          padding-top: size(24);
+        }
+
+        .title {
+          color: $black;
+          @include font($primaryFont, 16, normal, normal, 24);
+        }
+
+        .price {
+          color: $black;
+          @include font($primaryFont, 16, normal, normal, 24);
+        }
+      }
+    }
+  }
+
+  .deliveryinfos {
+    &-header {
+      .deliveryinfos-title {
+        color: $black;
+        @include font($secondaryFont, 20, normal, normal, 20);
+
+        @include breakpoint(mobile768) {
+          @include font($secondaryFont, 24, normal, normal, 24);
+        }
+  
+        @include breakpoint(tab992) {
+          @include font($secondaryFont, 28, normal, normal, 28);
+        }
+      }
+    }
+
+    &-body {
+      @include flex-column;
+      gap: size(16);
+
+      .text {
+        color: $black;
+        @include font($primaryFont, 16, normal, normal, 24);
+      }
+    }
+  }
+}

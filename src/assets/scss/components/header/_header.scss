@@ -1,0 +1,122 @@
+@use '../../global' as *;
+@use '../../partials' as *;
+
+.header {
+  background: $white;
+  box-shadow: $boxshadow-1;
+
+  &-nav {
+    @include flex-center-between;
+
+    @include breakpoint(tab992) {
+      justify-content: flex-start;
+      gap: size(120);
+    }
+
+    .hamburger {
+      @include breakpoint(tab992) {
+        display: none;
+      }
+
+      .btn-hamburger {
+        @include transparent-button;
+        width: size(28);
+        height: size(18);
+        @include flex-center;
+        overflow: hidden;
+
+        svg {
+          path {
+            fill: $primary;
+          }
+        }
+      }
+    }
+
+    .logo {
+      width: size(96);
+      height: size(64);
+      @include flex-center;
+      overflow: hidden;
+
+      @include breakpoint(tab992) {
+        width: size(126);
+        height: size(87);
+      }
+
+      img {
+        @include wh100;
+        object-fit: cover;
+      }
+    }
+
+    .desktopmenu {
+      padding-right: size(12);
+      width: auto;
+
+      @include breakpoint(tab992) {
+        width: calc(100% - size(246));
+        padding-right: 0;
+        @include flex-center-between;
+      }
+
+      .deskmenu {
+        display: none;
+
+        @include breakpoint(tab992) {
+          display: block;
+        }
+
+        .desktoplist {
+          @include list-horizontal;
+          gap: size(40);
+
+          &-link {
+            color: $menuBlack;
+            @include font($primaryFont, 16, medium, normal, 24);
+            @include transitionscolor;
+
+            @include hover {
+              color: $black;
+            }
+          }
+        }
+      }
+
+      .cartmenu{
+        .cartlink {
+          position: relative;
+          @include square(32);
+          @include flex-center;
+          
+          &::after {
+            content: attr(data-count);
+            position: absolute;
+            top: size(-12);
+            right: size(-12);
+            @include square(24);
+            @include flex-center;
+            @include circle;
+            @include setBgColor($primary, $btnText);
+            @include font($primaryFont, 14, medium, normal, 14);
+            text-align: center;
+          }
+
+          svg {
+            path {
+              @include transitionsall;
+            }
+          }
+
+          @include hover {
+            svg {
+              path {
+                fill: $primary;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

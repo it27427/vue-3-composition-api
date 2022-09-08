@@ -1,0 +1,151 @@
+@use '../../global' as *;
+@use '../../partials' as *;
+
+.footer {
+  &-content {
+    padding-top: size(32);
+
+    @include breakpoint(tab992) {
+      padding-top: size(48);
+    }
+
+    @include flex-column;
+    gap: size(48);
+
+    @include breakpoint(tab992) {
+      gap: size(80);
+    }
+
+    .footerdetails {
+      &:nth-child(even) {
+        background: rebeccapurple;
+      }
+    }
+  }
+
+  .footlogo {
+    width: size(120);
+    height: size(80);
+    @include flex-center;
+    margin-inline: auto;
+    overflow: hidden;
+
+    @include breakpoint(tab992) {
+      width: size(185);
+      height: size(145);
+    }
+
+    img {
+      @include wh100;
+      object-fit: cover;
+    }
+  }
+
+  .footerdetails {
+    @include flex-column;
+    gap: size(16);
+
+    @include breakpoint(tab992) {
+      gap: size(24);
+    }
+
+    &-header {
+      .footer-title {
+        color: $black;
+        @include font($secondaryFont, 20, semibold, normal, 20);
+      }
+    }
+
+    &-body {
+      .footerlist {
+        @include list-vertical;
+        gap: size(8);
+
+        &-link {
+          color: $linkText;
+          position: relative;
+          @include transitiontransform;
+  
+          &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: size(-2);
+            @include w100;
+            height: size(2);
+            background: $black;
+            @include scaleX(0);
+            @include transitiontransform;
+          }
+
+          @include hover {
+            color: $black;
+
+            &::before {
+              @include scaleX(1);
+            }
+          }
+        }
+
+        .social {
+          @include list-horizontal;
+          gap: size(16);
+          justify-content: flex-end;
+          
+          @include breakpoint(tab992) {
+            justify-content: flex-start;
+          }
+
+          &-link {
+            @include square(20);
+            @include flex-center;
+
+            svg {
+              @include wh100;
+
+              path {
+                @include transitionsall;
+              }
+            }
+
+            @include hover {
+              svg {
+                @include wh100;
+  
+                path {
+                  fill: $primary;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    background: $secondary;
+    padding: size(12);
+
+    &-info {
+      @include flex-center;
+      text-align: center;
+
+      .copyright-text {
+        color: $textCopyright;
+        @include font($primaryFont, 14, normal, normal, 20);
+        text-transform: capitalize;
+
+        @include breakpoint(tab992) {
+          @include font($primaryFont, 16, normal, normal, 24);
+        }
+
+        span {
+          color: inherit;
+          font: inherit;
+          // font-family: $secondaryFont;
+        }
+      }
+    }
+  }
+}

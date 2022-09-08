@@ -1,0 +1,64 @@
+@use '../global' as *;
+@use '../partials' as *;
+
+
+.option {
+  .optioninput {
+    &:checked ~ .optionlabel {
+      background: $btnText;
+      border-color: $btnText;
+
+      .title {
+        color: $white;
+      }
+    }
+  }
+
+  .optionlabel {
+    background: $white;
+    box-shadow: $boxshadow-3;
+    @include border(solid, 1, $cardborder);
+    @include radius(6);
+    cursor: pointer;
+    @include flex-center-column;
+    gap: size(10);
+    padding: size(20);
+    text-align: center;
+    @include transitionsall;
+
+    @include breakpoint(tab992) {
+      padding: size(28);
+    }
+
+    .icon {
+      @include square(48);
+      @include flex-center;
+      overflow: hidden;
+
+      @include breakpoint(mobile768) {
+        @include square(64);
+      }
+
+      @include breakpoint(tab992) {
+        @include square(93);
+      }
+
+      svg {
+        @include wh100;
+      }
+    }
+
+    .title {
+      color: $black;
+      @include font($primaryFont, 18, normal, normal, 18);
+
+      @include breakpoint(mobile768) {
+        @include font($primaryFont, 20, normal, normal, 20);
+      }
+
+      @include breakpoint(tab992) {
+        @include font($primaryFont, 24, normal, normal, 24);
+      }
+    }
+  }
+}

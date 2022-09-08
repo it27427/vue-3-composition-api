@@ -1,0 +1,191 @@
+@use '../global' as *;
+@use '../partials' as *;
+
+.gap {
+  height: size(64);
+
+  @include breakpoint(tab992) {
+    height: size(87);
+  }
+}
+
+.homebanner {
+  background: url(../images/home-banner/banner.svg) no-repeat;
+  background-position: center;
+  min-height: size(280);
+  @include flex-center;
+  padding-left: size(8);
+  padding-right: size(8);
+  @include single-radius(bottom, right, 80);
+
+  @include breakpoint(tab992) {
+    @include single-radius(bottom, right, 120);
+    min-height: size(400);
+    padding-left: size(0);
+    padding-right: size(0);
+  }
+
+  @include breakpoint(desktop1200) {
+    min-height: size(530);
+  }
+
+  .content {
+    @include flex-center-column;
+    gap: size(16);
+    text-align: center;
+
+    @include breakpoint(tab992) {
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .bannertitle {
+      color: $white;
+      @include font($secondaryFont, 24, semibold, normal, 24);
+
+      @include breakpoint(mobile768) {
+        @include font($secondaryFont, 36, semibold, normal, 36);
+      }
+
+      @include breakpoint(desktop1200) {
+        @include font($secondaryFont, 48, semibold, normal, 48);
+      }
+
+      @include breakpoint(desktop1400) {
+        @include font($secondaryFont, 64, semibold, normal, 64);
+      }
+    
+      span {
+        color: $primary;
+        font: inherit;
+      }
+    }
+
+    .bannerinfo {
+      .bannertext {
+        color: $white;
+        @include font($primaryFont, 16, normal, normal, 24);
+  
+        @include breakpoint(mobile768) {
+          @include font($primaryFont, 18, normal, normal, 26);
+        }
+  
+        @include breakpoint(desktop1200) {
+          @include font($primaryFont, 20, normal, normal, 28);
+        }
+      }
+    }
+
+    .banner-buttons {
+      @include flex-center;
+      gap: size(16);
+      margin-top: size(32);
+
+      @include breakpoint(mobile768) {
+        gap: size(40);
+      }
+    }
+  }
+}
+
+.homeproducts {
+  padding: size(40) size(0) size(64);
+  @include flex-center-column;
+  gap: size(32);
+  text-align: center;
+
+  @include breakpoint(tab992) {
+    padding: size(76) size(0) size(120);
+  }
+
+  &.productshop {
+    padding: size(32) size(0) size(64);
+
+    @include breakpoint(tab992) {
+      padding: size(32) size(0) size(96);
+    }
+  }
+
+  &-header {
+    @include flex-center;
+    @include w100;
+
+    .homeproducts-title {
+      color: $black;
+      @include font($secondaryFont, 24, normal, normal, 24);
+
+      @include breakpoint(tab992) {
+        @include font($secondaryFont, 28, normal, normal, 28);
+      }
+
+      @include breakpoint(desktop1200) {
+        @include font($secondaryFont, 36, normal, normal, 36);
+      }
+    }
+  }
+
+  &-content {
+    @include w100;
+
+    .emptybox {
+      background: $sectionBg;
+      height: size(255);
+      @include w100;
+    }
+
+    .products {
+      position: relative;
+      margin-top: size(-248);
+      z-index: 10;
+      @include w100;
+    }
+  }
+}
+
+.homesection {
+  background: $sectionBg;
+  padding: size(48) size(0) size(32);
+}
+
+.homefeatures {
+  padding: size(48) size(0) size(32);
+
+  @include breakpoint(tab992) {
+    padding: size(80) size(0) size(48);
+  }
+
+  .card-feature {
+    max-width: 75%;
+    margin-inline: auto;
+
+    @include breakpoint(tab992) {
+      max-width: 95%;
+    }
+  }
+}
+
+.newsletter {
+  background: $sectionBg;
+  padding: size(40) size(0) size(60);
+
+  &-content {
+    @include flex-center-column;
+    gap: size(24);
+  }
+
+  &-header {
+    .newsletter-title {
+      color: $textDark;
+      @include font($secondaryFont, 24, normal, normal, 24);
+      text-align: center;
+
+      @include breakpoint(tab992) {
+        @include font($secondaryFont, 28, normal, normal, 28);
+      }
+    }
+  }
+
+  &-body {
+    @include w100;
+  }
+}

@@ -1,0 +1,7 @@
+@use '../global' as *;
+@use '../partials' as p;
+
+.printshop-container {
+  max-width: 90%;
+  margin-inline: auto;
+}
