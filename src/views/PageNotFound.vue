@@ -3,5 +3,5 @@
 </script>
 
 <template>
-  <h1>This is Button Component</h1>
+  <h1>This is 404 Error Page</h1>
 </template>
