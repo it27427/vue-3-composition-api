@@ -1,23 +1,32 @@
 <script setup lang="ts">
   // import { defineComponent, ref } from 'vue'
+  import HeaderLink from './HeaderLink.vue'
+
+  components: { HeaderLink }
 </script>
 
 <template>
   <header class="header">
     <nav class="header-nav">
-      <HeaderLink to="/" exact class="logo">
-        <img src="../assets/images/logo/logo.svg" alt="brand-logo">
-      </HeaderLink>
+      <router-link to="/" class="logo">
+        <img src="../assets/images/logo/logo.svg" alt="brand-logo" />
+      </router-link>
 
       <ul class="headerlist">
         <li class="headerlist-item">
-          <HeaderLink to="/" exact>Home</HeaderLink>
+          <router-link to="/">Home</router-link>
         </li>
         <li class="headerlist-item">
-          <HeaderLink to="/blogs">Blogs</HeaderLink>
+          <router-link to="/blogs">Blogs</router-link>
         </li>
         <li class="headerlist-item">
-          <HeaderLink to="/contact">Contact</HeaderLink>
+          <router-link to="/contact">Contact</router-link>
+        </li>
+        <li class="headerlist-item">
+          <router-link to="/login">Login</router-link>
+        </li>
+        <li class="headerlist-item">
+          <router-link to="/register">Register</router-link>
         </li>
       </ul>
     </nav>

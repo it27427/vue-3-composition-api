@@ -5,14 +5,14 @@ import { blogs } from '../assets/blogs'
 import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
 
-// ERROR 404 PAGE NOT FOUND ROUTE
-import PageNotFound from '../views/PageNotFound.vue'
-
 // GENERAL ROUTES
 import Home from '../views/Home.vue'
-import Blogs from '../views/Blogs.vue'
-import Blog from '../views/Blog.vue'
+import Blogs from '../views/Blogs/Blogs.vue'
+import BlogDetails from '../views/Blogs/BlogDetails.vue'
 import Contact from '../views/Contact.vue'
+
+// ERROR 404 PAGE NOT FOUND ROUTE
+import NotFound from '../views/NotFound.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -36,26 +36,14 @@ const routes: Array<RouteRecordRaw> = [
     component: Blogs
   },
   {
-    path: '/blog/:id',
-    name: 'Blog',
-    component: Blog,
-    beforeEnter: (to, _, next) => {
-      const { id } = to.params
-
-      if (Array.isArray(id)) {
-        next({ path: '/error' })
-        return
-      }
-
-      // Is a valid index number
-      const index = parseInt(id)
-      if (index < 0 || index >= facts.length) {
-        next({ path: '/error' })
-        return
-      }
-
-      next()
-    }
+    path: '/blogs/:id',
+    name: 'BlogDetails',
+    component: BlogDetails,
+    props: true
+  },
+  {
+    path: '/all-blogs',
+    redirect: '/blogs'
   },
   {
     path: '/contact',
@@ -64,8 +52,8 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/:catchAll(.*)',
-    name: 'PageNotFound',
-    component: PageNotFound
+    name: 'NotFound',
+    component: NotFound
   }
 ]
 

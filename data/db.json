@@ -1,0 +1,166 @@
+
+{
+  "blogs": [
+    {
+      "id": "blogid-1",
+      "imgSrc": "https://cdn.pixabay.com/photo/2016/02/10/16/37/cat-1192026_960_720.jpg",
+      "text": "The world's largest cat measured 48.5 inches long."
+    },
+    {
+      "id": "blogid-2",
+      "imgSrc": "https://cdn.pixabay.com/photo/2016/01/20/13/05/cat-1151519_960_720.jpg",
+      "text": "Every year, nearly four million cats are eaten in China as a delicacy."
+    },
+    {
+      "id": "blogid-3",
+      "imgSrc": "https://cdn.pixabay.com/photo/2019/05/08/21/21/cat-4189697_960_720.jpg",
+      "text": "The technical term for a cat's hairball is a bezoar."
+    },
+    {
+      "id": "blogid-4",
+      "imgSrc": "https://cdn.pixabay.com/photo/2012/11/26/13/58/cat-67345_960_720.jpg",
+      "text": "Cats can survive falls from up to 65 feet or more."
+    },
+    {
+      "id": "blogid-5",
+      "imgSrc": "https://cdn.pixabay.com/photo/2015/01/31/12/36/cat-618470_960_720.jpg",
+      "text": "In 1879, Belgium unsuccessfully tried to use cats to deliver mail."
+    },
+    {
+      "id": "blogid-6",
+      "imgSrc": "https://cdn.pixabay.com/photo/2013/01/25/13/03/cat-76116_960_720.jpg",
+      "text": "Cats are the most popular pet in the United States."
+    },
+    {
+      "id": "blogid-7",
+      "imgSrc": "https://cdn.pixabay.com/photo/2018/10/11/12/31/black-cat-3739702_960_720.jpg",
+      "text": "Owning a cat can reduce the risk of stroke and heart attack by a third."
+    },
+    {
+      "id": "blogid-8",
+      "imgSrc": "https://cdn.pixabay.com/photo/2018/09/24/03/05/cat-3699032_960_720.jpg",
+      "text": "A cat's brain is 90% similar to a human's."
+    },
+    {
+      "id": "blogid-9",
+      "imgSrc": "https://cdn.pixabay.com/photo/2018/01/03/19/17/cat-3059075_960_720.jpg",
+      "text": "Female cats are typically right-pawed while male cats are typically left-pawed."
+    },
+    {
+      "id": "blogid-10",
+      "imgSrc": "https://cdn.pixabay.com/photo/2019/10/18/09/29/cat-4558651_960_720.jpg",
+      "text": "Cats and humans have nearly identical sections of the brain that control emotion."
+    }
+  ],
+
+  "products": [
+    {
+      "id": "productid-1",
+      "imgSrc": "https://static-01.daraz.com.bd/p/95d338af91765c09a531fd750779a907.jpg_200x200q80-product.jpg_.webp",
+      "title": "Outdoor Mini Backpack Travel Bag Daypack Bookbags 10L",
+      "currPrice": 2680,
+      "prevPrice": 2800,
+      "quantity": 250,
+      "rating": 5
+    },
+    {
+      "id": "productid-2",
+      "imgSrc": "https://static-01.daraz.com.bd/p/278994436b166b2189eb53f088c9c498.jpg_200x200q80-product.jpg_.webp",
+      "title": "PU Leather Watches Men Full Black Watch For Men/Boy",
+      "currPrice": 3500,
+      "prevPrice": 3870,
+      "quantity": 180,
+      "rating": 45
+    },
+    {
+      "id": "productid-3",
+      "prodIimgSrcmgSrc": "https://static-01.daraz.com.bd/p/2660bcf906653173a61a484de18855ce.jpg_200x200q80-product.jpg_.webp",
+      "title": "Anti-reflective UV400 Squre sunglass for man",
+      "currPrice": 2390,
+      "prevPrice": 2500,
+      "quantity": 169,
+      "rating": 65
+    },
+    {
+      "id": "productid-4",
+      "imgSrc": "https://static-01.daraz.com.bd/p/188da1a9c22444c1b26d4851af40d8e5.jpg_200x200q80-product.jpg_.webp",
+      "title": "High Quality Sneakers for men Men Casual Shoes Men Fashion Sneakers Fly knit Light weight Slip-on Men",
+      "currPrice": 5400,
+      "prevPrice": 5500,
+      "quantity": 124,
+      "rating": 450
+    },
+    {
+      "id": "productid-5",
+      "imgSrc": "https://static-01.daraz.com.bd/p/225c009e1aaa5d7d5009982e0285d8b7.jpg_200x200q80-product.jpg_.webp",
+      "title": "Airbuds Pro PU Leather Shockproof with Loss Prevention Clip Case Premium Protective Carrying Cover",
+      "currPrice": 1390,
+      "prevPrice": 1540,
+      "quantity": 234,
+      "rating": 53
+    },
+    {
+      "id": "productid-6",
+      "imgSrc": "https://static-01.daraz.com.bd/p/1cd414cfa3506df691e7a6f0f52e4481.jpg",
+      "title": "P47 Headband Foldable Stereo Bluetooth Headphones Wireless Headse",
+      "currPrice": 7390,
+      "prevPrice": 8540,
+      "quantity": 334,
+      "rating": 500
+    },
+    {
+      "id": "productid-7",
+      "imgSrc": "https://static-01.daraz.com.bd/p/561384f9c496fa2e77c8f3896591eba7.jpg",
+      "title": "F9 Bluetooth Earphone V5.0 Tws Wireless Earphone Led Display",
+      "currPrice": 5840,
+      "prevPrice": 5980,
+      "quantity": 132,
+      "rating": 427
+    },
+    {
+      "id": "productid-8",
+      "imgSrc": "https://static-01.daraz.com.bd/p/eb079add1bc8a3b0009159b70f1be665.jpg",
+      "title": "Xiaomi Redmi Buds 3 Youth Edition Headsets",
+      "currPrice": 3500,
+      "prevPrice": 3870,
+      "quantity": 180,
+      "rating": 345
+    },
+    {
+      "id": "productid-9",
+      "prodIimgSrcmgSrc": "https://static-01.daraz.com.bd/p/f2fc03c9c6beec046c9359543159d309.jpg",
+      "title": "Small Backpack for Men & Women to Travel School College Bag 10L &  15 x 10 x 5 Inches. .",
+      "currPrice": 290,
+      "prevPrice": 500,
+      "quantity": 69,
+      "rating": 252
+    },
+    {
+      "id": "productid-10",
+      "imgSrc": "https://static-01.daraz.com.bd/p/2d6bc2fbaeb0e3593a18e22c7f62fdc3.jpg",
+      "title": "Leather Bracelet for Men  Magnetic Stainless Steel Clasp",
+      "currPrice": 400,
+      "prevPrice": 500,
+      "quantity": 24,
+      "rating": 135
+    },
+    {
+      "id": "productid-11",
+      "imgSrc": "https://static-01.daraz.com.bd/p/1042411bbb20e56593eef9648c1eb169.jpg",
+      "title": "Soft Silicon Transparent Case back Cover For Oppo A15S/Oppo A15",
+      "currPrice": 130,
+      "prevPrice": 140,
+      "quantity": 34,
+      "rating": 451
+    },
+    {
+      "id": "productid-12",
+      "imgSrc": "https://static-01.daraz.com.bd/p/c22091b4358394d9d16ebb618f041295.jpg",
+      "title": "Black Leather Wallet with Mobile Cover  for Men",
+      "currPrice": 390,
+      "prevPrice": 540,
+      "quantity": 111,
+      "rating": 359
+    }
+  ]
+}

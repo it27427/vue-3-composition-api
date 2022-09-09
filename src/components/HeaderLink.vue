@@ -18,6 +18,4 @@
   <router-link :to="to" class="headerlist-link" :class="{ active: isActive }">
     <slot />
   </router-link>
-  
-    <router-view></router-view>
 </template>
