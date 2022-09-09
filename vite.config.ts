@@ -9,6 +9,6 @@ export default defineConfig({
   //     '@' : path.resolve(__dirname, './src')
   //   },
   // },
-  base: '/vue-3-composition-api',
+  // base: '/vue-3-composition-api',
   plugins: [vue()]
 })
